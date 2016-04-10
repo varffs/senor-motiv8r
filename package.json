@@ -11,8 +11,10 @@
   "dependencies": {
     "cron": "^1.1.0",
     "dotenv": "^2.0.0",
+    "lodash": "^4.9.0",
     "node-trello": "^1.1.2",
     "promise": "^7.1.1",
-    "random-number": "0.0.7"
+    "random-number": "0.0.7",
+    "request": "^2.70.0"
   }
 }
