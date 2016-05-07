@@ -32,7 +32,11 @@ var Motiv8r = {
   init: function() {
     var _this = this;
 
-    if (process.env.DEBUG !== 'true') {
+    if (process.env.DEBUG === 'true') {
+
+      _this.sendMotivation();
+
+    } else {
 
       var job = new CronJob({
         cronTime: _this.schedule,
@@ -42,14 +46,9 @@ var Motiv8r = {
 
         },
         start: true,
+        runOnInit: false,
         timeZone: _this.timezone
       });
-
-      job.start();
-
-    } else {
-
-      _this.sendMotivation();
 
     }
 
